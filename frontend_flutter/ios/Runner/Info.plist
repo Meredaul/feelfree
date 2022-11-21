@@ -31,8 +31,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -43,5 +41,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+    <string>The app uses bluetooth to find and connect with your alarm clock to be able to set it up.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>The app uses bluetooth to find and connect with your alarm clock to be able to set it up.</string>
 </dict>
 </plist>

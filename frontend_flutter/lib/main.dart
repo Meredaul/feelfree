@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_reactive_ble/flutter_reactive_ble.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -49,8 +51,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  final flutterReactiveBle = FlutterReactiveBle();
 
   void _incrementCounter() {
+    flutterReactiveBle.scanForDevices(withServices: [], scanMode: ScanMode.lowLatency).listen((device) {
+      print("Found one ?");
+    }, onError: () {
+      print("There is an error");
+    });
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
